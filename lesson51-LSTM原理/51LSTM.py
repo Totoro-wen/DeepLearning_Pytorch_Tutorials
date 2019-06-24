@@ -1,0 +1,1 @@
+#LSTM原理#RNN=short-term#LSTM=long-term#1.怎么解决梯度爆炸###将K次方变成累加#2.使用##nn.LSTM###__init__##LSTM.forward()##nn.LSTMCell##LSTMCell.forward()#3.single layer
