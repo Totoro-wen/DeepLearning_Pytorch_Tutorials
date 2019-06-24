@@ -1,0 +1,1 @@
+#梯度爆炸与梯度弥散#1.为什么出现梯度爆炸#答:w的k次方 > 1,然后再乘以一个数,容易得到一个∞的数#解决方案:梯度信息大于阈值,梯度clipping#2.为什么出现梯度弥撒#答:w < 1#详情见http://proceedings.mlr.press/v28/pascanu13.pdf#3.梯度clipping# loss=criterion(output, y)# model.zero_grad()# loss.backward()# for p in model.parameters():#     print(p.grad.norm())#     torch.nn.utils.clip_grad_norm_(p,10)#把梯度规范到0-10以内# optimizer.step()#4.梯度弥散
