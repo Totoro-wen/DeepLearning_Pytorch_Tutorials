@@ -125,6 +125,7 @@ def generate_image(D, G, xr, epoch):
     with torch.no_grad():
         z = torch.randn(batchsz, 2).cuda() # [b, 2]
         samples = G(z).cpu().numpy() # [b, 2]
+    xr = xr.data.cpu().numpy()
     plt.scatter(xr[:, 0], xr[:, 1], c='orange', marker='.')
     plt.scatter(samples[:, 0], samples[:, 1], c='green', marker='+')
 
