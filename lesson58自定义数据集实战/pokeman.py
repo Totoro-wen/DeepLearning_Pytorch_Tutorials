@@ -170,7 +170,8 @@ def main():
 
     # viz.image(x, win='sample_x', opts=dict(title='sample_x'))
     viz.image(db.denormalize(x), win='sample_x', opts=dict(title='sample_x'))
-
+    
+    # 训练时,加载一个batch
     loader = DataLoader(db, batch_size=32, shuffle=True, num_workers=8)#8个线程
 
     for x, y in loader:
