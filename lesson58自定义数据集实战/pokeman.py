@@ -101,7 +101,7 @@ class Pokemon(Dataset):
         # x = x_hat*std + mean
         # x: [c, h, w]
         # mean:[3] =>[3, 1, 1]
-        mean = torch.tensor(mean).unsqueeze(1).unsqueeze(1)
+        mean = torch.tensor(mean).unsqueeze(1).unsqueeze(1)## unsqueeze(1)在后面插入一个维度
         std = torch.tensor(std).unsqueeze(1).unsqueeze(1)
 
         x = x_hat * std + mean
