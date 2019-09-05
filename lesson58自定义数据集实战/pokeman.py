@@ -130,7 +130,8 @@ class Pokemon(Dataset):
         label = torch.tensor(label)
 
         return img, label
-
+    
+# 验证时使用
 def main():
 
     import visdom
